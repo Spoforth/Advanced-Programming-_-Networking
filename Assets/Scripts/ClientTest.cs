@@ -20,7 +20,7 @@ public class ClientTest : MonoBehaviour {
     public int inputCount; //how many inputs have been sent
     public int inputLimit; //how many inputs can be saved
     public Dictionary<int, GameObject> playerList = new Dictionary<int, GameObject>();
-    public List<string> inputList = new List<string>();
+    public Queue<string> inputList = new Queue<string>();
     public Canvas UICanvas;
 
 	void Start () 
@@ -89,11 +89,6 @@ public class ClientTest : MonoBehaviour {
 
                 break;
         }
-
-        if (inputList.Count > inputLimit)
-        {
-            inputList.RemoveAt(0);
-        }
 	}
 
     public void Connect()
@@ -124,8 +119,7 @@ public class ClientTest : MonoBehaviour {
         byte error;
         byte[] buffer = Encoding.Unicode.GetBytes(message);
         NetworkTransport.Send(hostId, connectionId, reliableChannelId, buffer, message.Length * sizeof(char), out error);
-        inputCount++;
-        inputList.Add(message);
+        inputList.Enqueue(message);
         Debug.Log("Sent Message: " + message);
     }
 }

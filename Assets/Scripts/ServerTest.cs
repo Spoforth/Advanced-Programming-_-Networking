@@ -10,7 +10,7 @@ public class ServerTest : MonoBehaviour {
 
     int connectionId;
     int maxConnections = 10;
-    public int reliableChannelId;
+    int reliableChannelId;
     int hostId;
     int socketPort = 8888;
     bool isStarted = false;
@@ -26,8 +26,9 @@ public class ServerTest : MonoBehaviour {
         hostId = NetworkTransport.AddHost(topology, socketPort, null); // null means anyone can join, used for servers
         Debug.Log("Socket Open. Host ID is " + hostId);
         isStarted = true;
-        coroutine = ExecuteAfterTime(0.2f);
-        StartCoroutine(coroutine);
+
+        //coroutine = ExecuteAfterTime(0.2f);
+        //StartCoroutine(coroutine);
     }
 
     void Update()
@@ -48,7 +49,7 @@ public class ServerTest : MonoBehaviour {
                 GameObject clone = Instantiate(playerObject, transform.position, transform.rotation);
                 clients.Add(recConnectionId, clone);
                 ServerClient cloneSC = clone.GetComponent<ServerClient>();
-                cloneSC.ConnectionID = recConnectionId;
+                cloneSC.HostID = recHostId;
                 string message = "PLAYERS|";
                 foreach (KeyValuePair<int, GameObject> c in clients)
                 {
@@ -58,9 +59,16 @@ public class ServerTest : MonoBehaviour {
                 break;
             case NetworkEventType.DataEvent:
                 string msg = Encoding.Unicode.GetString(recBuffer, 0, dataSize);
-                GameObject playerOBJ = clients[recConnectionId];
-                ServerClient serverPlayer = playerOBJ.GetComponent<ServerClient>();
-                serverPlayer.AddToQueue(msg);
+                Debug.Log("Receiving: " + msg);
+                string[] splitData = msg.Split('|');
+
+                switch (splitData[0])
+                {
+                    case "MOVE":
+                        Move(clients[recConnectionId], splitData[1], splitData[2]);
+                        break;
+                }
+
                 break;
             case NetworkEventType.DisconnectEvent:
                 Destroy(clients[recConnectionId]);
@@ -99,18 +107,31 @@ public class ServerTest : MonoBehaviour {
         }
     }
 
+    public void sendToHost(string message, int hostID, int ChannelID, int cnID)
+    {
+        byte error;
+        Debug.Log("Sending: " + message + "to player cnID " + cnID);
+        byte[] msg = Encoding.Unicode.GetBytes(message);
+        NetworkTransport.Send(hostId, cnID, ChannelID, msg, message.Length * sizeof(char), out error);
+    }
+
+    private void SendToPlayer(string message, int hostID, int channelID, int cnID)
+    {
+        byte error;
+        Debug.Log("Sending to host" + hostId + " : " + message);
+        byte[] msg = Encoding.Unicode.GetBytes(message);
+        NetworkTransport.Send(hostId, cnID, channelID, msg, msg.Length * sizeof(char), out error);
+    }
+
     IEnumerator ExecuteAfterTime(float time)
     {
+        yield return new WaitForSeconds(time);
         string msg = "POSUPDATE|";
         foreach (KeyValuePair<int, GameObject> entry in clients)
         {
-            GameObject obj = entry.Value;
-            ServerClient sc = obj.GetComponent<ServerClient>();
-            sc.RunQueue();
             msg += entry.Value.transform.position.x + "/" + entry.Value.transform.position.y + "/" + entry.Value.transform.position.z + "|";
         }
         Debug.Log("Updating Positions. Message is: " + msg);
         Send(msg, reliableChannelId, connectionId);
-        yield return new WaitForSeconds(time);
     }
 }

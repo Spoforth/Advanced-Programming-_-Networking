@@ -4,7 +4,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class ServerClient : physicsManager {
+public class ServerClient : MonoBehaviour, fpsController{
 
     public int HostID;
     public int ConnectionID;
@@ -13,7 +13,8 @@ public class ServerClient : physicsManager {
     int maxConnections = 10;
     int reliableChannelId;
     int hostId;
-    int socketPort = 8888;
+    public Transform rayOrigin;
+    public LineRenderer line;
 
     public Rigidbody rb;
     List<string> inputList = new List<string>();
@@ -52,21 +53,19 @@ public class ServerClient : physicsManager {
                 switch (splitData[1])
                 {
                     case "ACCEL":
-                        adjustAcceleration(float.Parse(splitData[2]));
+                        Move(float.Parse(splitData[2]));
                         break;
                     case "STOPACCEL":
-                        stopAcceleration();
+                        Shoot();
                         break;
                     case "ROTATE":
                         string[] turnData = splitData[2].Split('/');
-                        turn(float.Parse(turnData[0]), float.Parse(turnData[1]), float.Parse(turnData[2]));
+                        Turn(float.Parse(turnData[0]), float.Parse(turnData[1]), float.Parse(turnData[2]));
                         break;
                 }
 
                 break;
         }
-
-        rb.AddForce(Vector3.forward * accelforce);
 
         if (inputList.Count > inputLimit)
         {
@@ -74,18 +73,40 @@ public class ServerClient : physicsManager {
         }
     }
 
-    public override void adjustAcceleration(float accel)
+    public void Move(float xMov, float zMov)
     {
-        accelforce += accel;
+        
     }
 
-    public override void stopAcceleration()
+    public void Shoot()
     {
-        accelforce = 0;
+        StopCoroutine("fireLaser");
+        StartCoroutine("fireLaser");
     }
 
-    public override void turn(float xRot, float yRot, float zRot)
+    public void Turn(float xRot, float yRot, float zRot)
     {
         transform.Rotate(xRot, yRot, zRot);
+    }
+
+    IEnumerator fireLaser()
+    {
+        line.enabled = true;
+        while (Input.GetButton("Fire1"))
+        {
+            Ray ray = new Ray(rayOrigin.position, rayOrigin.forward);
+            RaycastHit hit;
+            line.SetPosition(0, ray.origin);
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                line.SetPosition(1, hit.point);
+            }
+            else
+            {
+                line.SetPosition(1, ray.GetPoint(100));
+            }
+            yield return null;
+        }
+        line.enabled = false;
     }
 }

@@ -2,67 +2,83 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerController : physicsManager {
+public class playerController : MonoBehaviour, fpsController {
 
     Rigidbody rb;
     ClientTest client;
+    public Transform rayOrigin;
+    LineRenderer line;
 
 	void Start () 
     {
         rb = GetComponent<Rigidbody>();
         GameObject temp = GameObject.FindGameObjectWithTag("Client");
         client = temp.GetComponent<ClientTest>();
+        line = gameObject.GetComponent<LineRenderer>();
+        line.enabled = false;
+        Cursor.visible = false;
 	}
 	
 	void Update () 
     {
-        float accel = Input.GetAxis("Vertical");
-        float pitch = Input.GetAxis("Mouse X");
-        float yaw = Input.GetAxis("Mouse Y");
-        float roll = Input.GetAxis("Horizontal");
+        float xMov = Input.GetAxis("Vertical");
+        float yMov = Input.GetAxis("Horizontal");
+        float xLook = Input.GetAxis("Mouse X");
+        float yLook = Input.GetAxis("Mouse Y");
 
-        if (accel != 0)
+        if (xMov != 0)
         {
-            adjustAcceleration(accel);
-            client.send("ACCEL|" + accel.ToString());
+            Move(xMov, yMov);
+            client.send("MOVE|" + xMov.ToString());
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown("Fire1"))
         {
-            stopAcceleration();
-            client.send("STOPACCEL");
+            Shoot();
+            client.send("SHOOT");
         }
 
-        if (pitch != 0 || yaw != 0 || roll != 0)
+        if (xLook != 0 || yLook != 0)
         {
-            turn(pitch, yaw, roll);
-            client.send("ROTATE|" + pitch.ToString() + "/" + yaw.ToString() + "/" + roll.ToString());
+            Turn(xLook, yLook, yMov);
+            client.send("TURN|" + xLook.ToString() + "/" + yLook.ToString() + "|");
         }
-
-        rb.AddForce(Vector3.forward * accelforce);
 	}
 
-    public override void adjustAcceleration(float accelValue)
+    public void Move(float xMov, float zMov)
     {
-        accelforce += accelValue;
-        if (accelforce < 0)
-        {
-            accelforce = 0;
-        }
-
-        if (accelforce >= maxAccelForce)
-        {
-            accelforce = maxAccelForce;
-        }
+        transform.Translate(new Vector3(xMov, 0, zMov));
     }
 
-    public override void stopAcceleration()
+    public void Shoot()
     {
-        accelforce = 0;
+        StopCoroutine("fireLaser");
+        StartCoroutine("fireLaser");
     }
 
-    public override void turn(float xRot, float yRot, float zRot)
+    public void Turn(float xRot, float yRot, float zRot)
     {
         this.transform.Rotate(xRot, yRot, zRot);
+    }
+
+    IEnumerator fireLaser()
+    {
+        line.enabled = true;
+        while (Input.GetButton("Fire1"))
+        {
+            Ray ray = new Ray(rayOrigin.position, rayOrigin.forward);
+            RaycastHit hit;
+            line.SetPosition(0, ray.origin);
+            if (Physics.Raycast (ray, out hit, 100))
+            {
+                line.SetPosition(1, hit.point);
+            }
+            else
+            {
+                line.SetPosition(1, ray.GetPoint(100));
+            }
+            yield return null;
+        }
+        line.enabled = false;
     }
 }

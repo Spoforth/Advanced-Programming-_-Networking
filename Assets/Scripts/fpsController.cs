@@ -6,5 +6,5 @@ public interface fpsController{
 
     void Move(float xMov, float zMov);
     void Shoot();
-    void Turn(float xRot, float yRot, float zRot);
+    void Turn(float xRot, float yRot);
 }

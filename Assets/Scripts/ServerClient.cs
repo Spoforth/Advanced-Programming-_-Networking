@@ -6,7 +6,11 @@ using UnityEngine.Networking;
 
 public class ServerClient : MonoBehaviour, fpsController{
 
-    public int HostID;
+    public delegate void Respawn(float time);
+    public event Respawn RespawnMe;
+    public bool isDead;
+    public int health;
+    public int damage;
     public int ConnectionID;
     public string playerName;
     public ServerTest server;
@@ -14,12 +18,11 @@ public class ServerClient : MonoBehaviour, fpsController{
     int reliableChannelId;
     int hostId;
     public Transform rayOrigin;
-    public LineRenderer line;
-
+    public bool firing;
     public Rigidbody rb;
-    List<string> inputList = new List<string>();
+    List<string> inputQueue = new List<string>();
     int inputCount = 0; //how many inputs have been sent
-    int inputLimit; //how many inputs can be saved
+    int lastInputProcessed = 0;
 
     void Start()
     {
@@ -33,49 +36,9 @@ public class ServerClient : MonoBehaviour, fpsController{
         server = serverOBJ.GetComponent<ServerTest>();
     }
 
-    void Update()
-    {
-        int recConnectionId;
-        int recChannelId;
-        byte[] recBuffer = new byte[1024];
-        int bufferSize = 1024;
-        int dataSize;
-        byte error;
-        NetworkEventType recNetworkEvent = NetworkTransport.ReceiveFromHost(HostID, out recConnectionId, out recChannelId, recBuffer, bufferSize, out dataSize, out error);
-
-        switch (recNetworkEvent)
-        {
-            case NetworkEventType.DataEvent:
-                string msg = Encoding.Unicode.GetString(recBuffer, 0, dataSize);
-                Debug.Log("Receiving: " + msg);
-                string[] splitData = msg.Split('|');
-
-                switch (splitData[1])
-                {
-                    case "ACCEL":
-                        Move(float.Parse(splitData[2]));
-                        break;
-                    case "STOPACCEL":
-                        Shoot();
-                        break;
-                    case "ROTATE":
-                        string[] turnData = splitData[2].Split('/');
-                        Turn(float.Parse(turnData[0]), float.Parse(turnData[1]), float.Parse(turnData[2]));
-                        break;
-                }
-
-                break;
-        }
-
-        if (inputList.Count > inputLimit)
-        {
-            inputList.RemoveAt(0);
-        }
-    }
-
     public void Move(float xMov, float zMov)
     {
-        
+        transform.Translate(xMov, 0, zMov);
     }
 
     public void Shoot()
@@ -84,29 +47,75 @@ public class ServerClient : MonoBehaviour, fpsController{
         StartCoroutine("fireLaser");
     }
 
-    public void Turn(float xRot, float yRot, float zRot)
+    public void Turn(float xRot, float yRot)
     {
-        transform.Rotate(xRot, yRot, zRot);
+        transform.Rotate(xRot, yRot, 0);
     }
 
     IEnumerator fireLaser()
     {
-        line.enabled = true;
-        while (Input.GetButton("Fire1"))
+        while (firing == true)
         {
             Ray ray = new Ray(rayOrigin.position, rayOrigin.forward);
             RaycastHit hit;
-            line.SetPosition(0, ray.origin);
             if (Physics.Raycast(ray, out hit, 100))
             {
-                line.SetPosition(1, hit.point);
-            }
-            else
-            {
-                line.SetPosition(1, ray.GetPoint(100));
+                if (hit.transform.tag == "Player")
+                {
+                    GameObject playerHit = hit.transform.gameObject;
+                    ServerClient playerSC = playerHit.GetComponent<ServerClient>();
+                    playerSC.GetShot(50);
+                }
             }
             yield return null;
         }
-        line.enabled = false;
+        firing = false;
+    }
+
+    public void GetShot(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            isDead = true;
+            if (RespawnMe != null)
+            {
+                RespawnMe(5f);
+            }
+        }
+    }
+
+    public void addToQueue(byte[] packet)
+    {
+        string inputString = Encoding.Unicode.GetString(packet);
+        inputQueue.Add(inputString);
+    }
+
+    public void runQueue()
+    {
+        string msg = ConnectionID + "|";
+        for (int i = 0; i < inputQueue.Count; i++)
+        {
+            msg += inputQueue[i] + "|";
+            string[] splitData = inputQueue[i].Split('|');
+            switch (splitData[1])
+            {
+                case "MOVE":
+                    Move(float.Parse(splitData[2]), float.Parse(splitData[3]));
+                    msg += "MOVE%" + splitData[2] + "%" + splitData[3] + "|";
+                    break;
+                case "SHOOT":
+                    Shoot();
+                    msg += "SHOOT|";
+                    break;
+                case "TURN":
+                    string[] turnData = splitData[2].Split('/');
+                    Turn(float.Parse(turnData[0]), float.Parse(turnData[1]));
+                    msg += turnData[0] + "%" + turnData[1] + "|";
+                    break;
+            }
+        }
+        server.SendToPlayer("INPUTPROCESSED|" + inputCount + "|" + transform.position.x + "/" + transform.position.y + "/" + transform.position.z + "|" + transform.rotation.x + "/" + transform.rotation.y + "|", ConnectionID, reliableChannelId);
+        lastInputProcessed = inputCount;
     }
 }

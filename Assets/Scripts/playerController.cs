@@ -8,6 +8,7 @@ public class playerController : MonoBehaviour, fpsController {
     ClientTest client;
     public Transform rayOrigin;
     LineRenderer line;
+    public bool isDead;
 
 	void Start () 
     {
@@ -26,22 +27,25 @@ public class playerController : MonoBehaviour, fpsController {
         float xLook = Input.GetAxis("Mouse X");
         float yLook = Input.GetAxis("Mouse Y");
 
-        if (xMov != 0)
+        if (isDead == false)
         {
-            Move(xMov, yMov);
-            client.send("MOVE|" + xMov.ToString());
-        }
+            if (xMov != 0)
+            {
+                Move(xMov, yMov);
+                client.send("MOVE|" + xMov.ToString());
+            }
 
-        if (Input.GetKeyDown("Fire1"))
-        {
-            Shoot();
-            client.send("SHOOT");
-        }
+            if (Input.GetKeyDown("Fire1"))
+            {
+                Shoot();
+                client.send("SHOOT");
+            }
 
-        if (xLook != 0 || yLook != 0)
-        {
-            Turn(xLook, yLook, yMov);
-            client.send("TURN|" + xLook.ToString() + "/" + yLook.ToString() + "|");
+            if (xLook != 0 || yLook != 0)
+            {
+                Turn(xLook, yLook);
+                client.send("TURN|" + xLook.ToString() + "/" + yLook.ToString() + "|");
+            }
         }
 	}
 
@@ -56,9 +60,9 @@ public class playerController : MonoBehaviour, fpsController {
         StartCoroutine("fireLaser");
     }
 
-    public void Turn(float xRot, float yRot, float zRot)
+    public void Turn(float xRot, float yRot)
     {
-        this.transform.Rotate(xRot, yRot, zRot);
+        this.transform.Rotate(xRot, yRot, 0);
     }
 
     IEnumerator fireLaser()

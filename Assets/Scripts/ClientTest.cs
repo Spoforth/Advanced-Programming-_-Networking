@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class ClientTest : MonoBehaviour {
 
@@ -11,10 +12,14 @@ public class ClientTest : MonoBehaviour {
     int maxConnections = 10;
     int reliableChannelId;
     int hostId;
-    int socketPort = 8888;
+    playerController player;
+    string ipAddress;
+    int health = 100;
     bool isStarted = false;
     byte error;
 
+    public delegate void Respawn(float time);
+    public event Respawn RespawnMe;
     public GameObject playerPrefab;
     public GameObject otherPlayers;
     public int inputCount; //how many inputs have been sent
@@ -68,7 +73,7 @@ public class ClientTest : MonoBehaviour {
                             }
                         }
                         break;
-                    case "POSUPDATE":
+                    case "UPDATE":
                         for(int i = 1; i <= splitData.Length; i++)
                         {
 
@@ -84,6 +89,27 @@ public class ClientTest : MonoBehaviour {
                                 playerList[int.Parse(temp[0])].transform.position = pos;
                             }
                         }
+                        break;
+                    case "INPUTPROCESSED":
+                        Vector3 newPos = Vector3.zero;
+                        Vector3 newRot = Vector3.zero;
+
+                        for (int i = 0; i < inputList.Count; i++)
+                        {
+                            string[] inputArray = inputList[i].Split('|');
+                            if (int.Parse(splitData[1]) < int.Parse(inputArray[0]))
+                            {
+                                continue;
+                            }
+                            else if (int.Parse(splitData[1]) == int.Parse(inputArray[0])) ;
+                            {
+                                string[] posArray = splitData[2].Split('/');
+                                string[] rotArray = splitData[3].Split('/');
+                                newPos = new Vector3(float.Parse(posArray[0]), float.Parse(posArray[1]), float.Parse(posArray[2]));
+                                newRot = new Vector3(float.Parse(rotArray[0]), float.Parse(rotArray[1]), 0);
+                            }
+                        }
+
                         break;
                 }
 
@@ -103,7 +129,7 @@ public class ClientTest : MonoBehaviour {
         HostTopology topology = new HostTopology(config, maxConnections);
         hostId = NetworkTransport.AddHost(topology,0);
         Debug.Log("Socket Open. Host ID is " + hostId);
-        connectionId = NetworkTransport.Connect(hostId, "127.0.0.1", socketPort, 0, out error);
+        connectionId = NetworkTransport.Connect(hostId, "127.0.0.1", 0, 0, out error);
         Debug.Log("Connected to Server. Connection ID: " + connectionId);
         UICanvas.enabled = false;
         isStarted = true;
@@ -127,5 +153,18 @@ public class ClientTest : MonoBehaviour {
         inputCount++;
         inputList.Add(message);
         Debug.Log("Sent Message: " + message);
+    }
+
+    public void GetShot(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            if (RespawnMe != null)
+            {
+                RespawnMe(5f);
+                player.isDead = true;
+            }
+        }
     }
 }

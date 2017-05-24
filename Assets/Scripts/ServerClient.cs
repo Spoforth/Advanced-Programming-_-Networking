@@ -6,13 +6,13 @@ using UnityEngine.Networking;
 
 public class ServerClient : MonoBehaviour, fpsController{
 
-    public delegate void Respawn(float time);
+    public delegate void Respawn(int connectionID);
     public event Respawn RespawnMe;
     public bool isDead;
     public int health;
+    public int maxHealth;
     public int damage;
     public int ConnectionID;
-    public string playerName;
     public ServerTest server;
     int maxConnections = 10;
     int reliableChannelId;
@@ -80,9 +80,11 @@ public class ServerClient : MonoBehaviour, fpsController{
             isDead = true;
             if (RespawnMe != null)
             {
-                RespawnMe(5f);
+                RespawnMe(ConnectionID);
             }
+            transform.GetChild(0).gameObject.SetActive(false);
         }
+
     }
 
     public void addToQueue(byte[] packet)

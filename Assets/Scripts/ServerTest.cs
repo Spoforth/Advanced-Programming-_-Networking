@@ -16,9 +16,9 @@ public class ServerTest : MonoBehaviour {
     int socketPort = 8888;
     bool isStarted = false;
     private IEnumerator coroutine;
-    public float time;
+    public float respawnTime = 3f;
     public Dictionary<int, GameObject> clients = new Dictionary<int, GameObject>();
-    Transform[] spawnPoints;
+    public Transform[] spawnPoints;
     
     void Start()
     {
@@ -75,7 +75,7 @@ public class ServerTest : MonoBehaviour {
 
     void FixedUpdate()
     {
-        time += Time.deltaTime;
+
     }
 
     public void Send(string message, int channelID)
@@ -97,6 +97,11 @@ public class ServerTest : MonoBehaviour {
         NetworkTransport.Send(hostId, cnID, channelID, msg, msg.Length * sizeof(char), out error);
     }
 
+    public void StartSpawnProcess(int playerID)
+    {
+        StartCoroutine("SpawnPlayer", playerID);
+    }
+
     IEnumerator ExecuteAfterTime(float time)
     {
         string msg = "UPDATE";
@@ -105,10 +110,22 @@ public class ServerTest : MonoBehaviour {
             GameObject obj = entry.Value;
             ServerClient sc = obj.GetComponent<ServerClient>();
             sc.runQueue();
-            msg += entry.Key + "|" + entry.Value.transform.position.x + "/" + entry.Value.transform.position.y + "/" + entry.Value.transform.position.z + "|" + entry.Value.transform.rotation.x + "/" + entry.Value.transform.rotation.y + "|" + sc.health + "|" + sc.firing.ToString() + "|" + sc.isDead.ToString() + "|";
+            msg += entry.Key + "|" + entry.Value.transform.position.x + "/" + entry.Value.transform.position.y + "/" + entry.Value.transform.position.z + "|" + entry.Value.transform.rotation.x + "/" + entry.Value.transform.rotation.y + "|" + sc.health + "|" + sc.isDead.ToString() + "|" + sc.firing.ToString() + "|";
         }
         Debug.Log("Updating Positions. Message is: " + msg);
         Send(msg, reliableChannelId);
         yield return new WaitForSeconds(time);
+    }
+
+    IEnumerator SpawnPlayer(int playerID)
+    {
+        yield return new WaitForSeconds(respawnTime);
+        int index = Random.Range(0, spawnPoints.Length);
+        GameObject player = clients[playerID];
+        player.transform.position = spawnPoints[index].position;
+        ServerClient sc = player.GetComponent<ServerClient>();
+        sc.isDead = false;
+        sc.health = sc.maxHealth;
+        player.transform.GetChild(0).gameObject.SetActive(true);
     }
 }

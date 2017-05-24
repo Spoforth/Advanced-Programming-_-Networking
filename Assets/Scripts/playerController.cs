@@ -6,45 +6,45 @@ public class playerController : MonoBehaviour, fpsController {
 
     Rigidbody rb;
     ClientTest client;
-    public Transform rayOrigin;
+    public GameObject rayOrigin;
+    public GameObject head;
     LineRenderer line;
     public bool isDead;
+    public float xLimit;
 
 	void Start () 
     {
         rb = GetComponent<Rigidbody>();
         GameObject temp = GameObject.FindGameObjectWithTag("Client");
         client = temp.GetComponent<ClientTest>();
-        line = gameObject.GetComponent<LineRenderer>();
-        line.enabled = false;
         Cursor.visible = false;
 	}
 	
 	void Update () 
     {
-        float xMov = Input.GetAxis("Vertical");
-        float yMov = Input.GetAxis("Horizontal");
-        float xLook = Input.GetAxis("Mouse X");
+        float xMov = Input.GetAxis("Horizontal");
+        float zMov = Input.GetAxis("Vertical");
         float yLook = Input.GetAxis("Mouse Y");
+        float xLook = Input.GetAxis("Mouse X");
 
         if (isDead == false)
         {
-            if (xMov != 0)
+            if (xMov != 0 || zMov != 0)
             {
-                Move(xMov, yMov);
+                Move(xMov, zMov);
                 client.send("MOVE|" + xMov.ToString());
             }
 
-            if (Input.GetKeyDown("Fire1"))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 Shoot();
                 client.send("SHOOT");
             }
 
-            if (xLook != 0 || yLook != 0)
+            if (yLook != 0 || xLook != 0)
             {
-                Turn(xLook, yLook);
-                client.send("TURN|" + xLook.ToString() + "/" + yLook.ToString() + "|");
+                Turn(yLook, xLook);
+                client.send("TURN|" + yLook.ToString() + "/" + xLook.ToString() + "|");
             }
         }
 	}
@@ -62,15 +62,18 @@ public class playerController : MonoBehaviour, fpsController {
 
     public void Turn(float xRot, float yRot)
     {
-        this.transform.Rotate(xRot, yRot, 0);
+        transform.Rotate(0, yRot, 0);
+        head.transform.Rotate(-xRot, 0, 0);
+        head.transform.localRotation = Quaternion.Euler(head.transform.eulerAngles.x, 0, 0);
     }
 
     IEnumerator fireLaser()
     {
+        line = rayOrigin.GetComponent<LineRenderer>();
         line.enabled = true;
         while (Input.GetButton("Fire1"))
         {
-            Ray ray = new Ray(rayOrigin.position, rayOrigin.forward);
+            Ray ray = new Ray(rayOrigin.transform.position, rayOrigin.transform.forward);
             RaycastHit hit;
             line.SetPosition(0, ray.origin);
             if (Physics.Raycast (ray, out hit, 100))
@@ -85,4 +88,5 @@ public class playerController : MonoBehaviour, fpsController {
         }
         line.enabled = false;
     }
+
 }

@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.SceneManagement;
 
 public class ClientTest : MonoBehaviour {
 
@@ -30,6 +29,11 @@ public class ClientTest : MonoBehaviour {
 	void Start () 
     {
         NetworkTransport.Init();
+        ConnectionConfig config = new ConnectionConfig();
+        reliableChannelId = config.AddChannel(QosType.Reliable);
+        HostTopology topology = new HostTopology(config, maxConnections);
+        hostId = NetworkTransport.AddHost(topology, 8000);
+        Debug.Log("Socket Open. Host ID is " + hostId);
 	}
 	
 	void Update () 
@@ -62,7 +66,7 @@ public class ClientTest : MonoBehaviour {
                             float playerZ = float.Parse(message[3]);
                             if (playerList.ContainsKey(int.Parse(message[0])))
                             {
-                                return;
+                                continue;
                             }
                             else
                             {
@@ -75,11 +79,17 @@ public class ClientTest : MonoBehaviour {
                         for(int i = 1; i <= splitData.Length; i++)
                         {
                             int playerID = int.Parse(splitData[1]);
+                            if (playerID == connectionId)
+                            {
+                                continue;
+                            }
+                            GameObject obj = playerList[playerID];
                             Vector3 oldPos = playerList[playerID].transform.position;
                             Vector3 oldRot = playerList[playerID].transform.eulerAngles;
                             Vector3 pos =  new Vector3(float.Parse(splitData[3]), float.Parse(splitData[3]), float.Parse(splitData[4]));
-                            Vector3 rot = new Vector3(float.Parse(splitData[5]), float.Parse(splitData[6]), 0);
-
+                            obj.transform.position = Vector3.Lerp(oldPos, pos, 0.2f);
+                            obj.transform.rotation = Quaternion.FromToRotation(oldRot, new Vector3(0, float.Parse(splitData[4]), 0));
+                            obj.transform.GetChild(0).transform.rotation = Quaternion.FromToRotation(oldRot, new Vector3(float.Parse(splitData[5]), 0, 0));
                         }
                         break;
                     case "INPUTPROCESSED":
@@ -114,9 +124,12 @@ public class ClientTest : MonoBehaviour {
                             }
                         }
                         transform.position = Vector3.Lerp(transform.position, newPos, 0);
-                        transform.rotation = Quaternion.FromToRotation(transform.eulerAngles, newRot);
-                        
-
+                        transform.rotation = Quaternion.FromToRotation(transform.eulerAngles, new Vector3(0, newRot.y));
+                        transform.GetChild(0).transform.rotation = Quaternion.FromToRotation(transform.eulerAngles, new Vector3(newRot.x, 0));
+                        break;
+                    case "DC":
+                        Destroy(playerList[int.Parse(splitData[1])]);
+                        playerList.Remove(int.Parse(splitData[1]));
                         break;
                 }
 
@@ -131,11 +144,6 @@ public class ClientTest : MonoBehaviour {
 
     public void Connect()
     {
-        ConnectionConfig config = new ConnectionConfig();
-        reliableChannelId = config.AddChannel(QosType.Reliable);
-        HostTopology topology = new HostTopology(config, maxConnections);
-        hostId = NetworkTransport.AddHost(topology,0);
-        Debug.Log("Socket Open. Host ID is " + hostId);
         connectionId = NetworkTransport.Connect(hostId, "127.0.0.1", 0, 0, out error);
         if ((NetworkError)error == NetworkError.Ok)
         {

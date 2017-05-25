@@ -17,14 +17,14 @@ Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Net
 Loading C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\SERVER\server_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\SERVER\server_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\SERVER\server_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.020 seconds
+- Completed reload, in  0.021 seconds
 Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\SERVER\server_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\SERVER\server_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3200x1080 at -1280,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.954647 ms
+UnloadTime: 1.068711 ms
 Socket Open. Host ID is 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -38,5 +38,5 @@ Sending: UPDATE
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1ce4 -> priority: 1 
-  Thread -> id: 1dec -> priority: 1 
+  Thread -> id: 1ddc -> priority: 1 
+  Thread -> id: 1188 -> priority: 1 

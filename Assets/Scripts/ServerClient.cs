@@ -1,15 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class ServerClient : MonoBehaviour, fpsController{
+public class ServerClient : player{
 
     public delegate void Respawn(int connectionID);
     public event Respawn RespawnMe;
-    public bool isDead;
-    public int health;
     public int maxHealth;
     public int damage;
     public int ConnectionID;
@@ -34,22 +33,6 @@ public class ServerClient : MonoBehaviour, fpsController{
         Debug.Log("Socket Open. Host ID is " + hostId);
         GameObject serverOBJ = GameObject.FindGameObjectWithTag("Server");
         server = serverOBJ.GetComponent<ServerTest>();
-    }
-
-    public void Move(float xMov, float zMov)
-    {
-        transform.Translate(xMov, 0, zMov);
-    }
-
-    public void Shoot()
-    {
-        StopCoroutine("fireLaser");
-        StartCoroutine("fireLaser");
-    }
-
-    public void Turn(float xRot, float yRot)
-    {
-        transform.Rotate(xRot, yRot, 0);
     }
 
     IEnumerator fireLaser()
@@ -119,5 +102,15 @@ public class ServerClient : MonoBehaviour, fpsController{
         }
         server.SendToPlayer("INPUTPROCESSED|" + inputCount + "|" + transform.position.x + "/" + transform.position.y + "/" + transform.position.z + "|" + transform.rotation.x + "/" + transform.rotation.y + "|", ConnectionID, reliableChannelId);
         lastInputProcessed = inputCount;
+        IEnumerable<string> query = inputQueue.Where(x => int.Parse(x[0].ToString()) <= inputCount).OrderBy(n => n);
+        foreach (string item in query)
+        {
+            inputQueue.Remove(item);
+        }
+    }
+
+    public bool checkInputNumber(string s)
+    {
+        return s.StartsWith(inputCount.ToString());
     }
 }

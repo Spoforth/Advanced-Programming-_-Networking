@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerController : MonoBehaviour, fpsController {
+public class playerController : player {
 
     Rigidbody rb;
     ClientTest client;
     public GameObject rayOrigin;
     public GameObject head;
     LineRenderer line;
-    public bool isDead;
     public float xLimit;
 
 	void Start () 
@@ -49,18 +48,7 @@ public class playerController : MonoBehaviour, fpsController {
         }
 	}
 
-    public void Move(float xMov, float zMov)
-    {
-        transform.Translate(new Vector3(xMov, 0, zMov));
-    }
-
-    public void Shoot()
-    {
-        StopCoroutine("fireLaser");
-        StartCoroutine("fireLaser");
-    }
-
-    public void Turn(float xRot, float yRot)
+    public override void Turn(float xRot, float yRot)
     {
         transform.Rotate(0, yRot, 0);
         head.transform.Rotate(-xRot, 0, 0);

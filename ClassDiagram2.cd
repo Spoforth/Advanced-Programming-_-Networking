@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ClientTest">
+    <Position X="4.75" Y="2.25" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="ClientTest.Respawn" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ClientTest.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQAACAwAiAAUIAABAEAIIAhAAAABCABCAAACAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\ClientTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="player">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIEABAAAAAACAgAAABAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\player.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="playerController">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAgCAAQAAEAAACAAAAAABAAAAAAAAABAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\playerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerClient">
+    <Position X="3" Y="4" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="ServerClient.Respawn" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\ServerClient.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAACAoAiAA0AAkAAAIgAABAABAAjAACAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\ServerClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerTest">
+    <Position X="6.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAABAAAiAACAACAEAAIEAhEAQCAAACCAAAAAAQAQA=</HashCode>
+      <FileName>Assets\Scripts\ServerTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.MonoBehaviour" Collapsed="true">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="fpsController">
+    <Position X="8.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAABAAAAAACAAAAABAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\fpsController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

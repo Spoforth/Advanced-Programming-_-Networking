@@ -47,7 +47,7 @@ public class ServerClient : player{
                 {
                     GameObject playerHit = hit.transform.gameObject;
                     ServerClient playerSC = playerHit.GetComponent<ServerClient>();
-                    playerSC.GetShot(50);
+                    playerSC.GetShot(50); //deal damage
                 }
             }
             yield return null;
@@ -65,7 +65,8 @@ public class ServerClient : player{
             {
                 RespawnMe(ConnectionID);
             }
-            transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(0).gameObject.SetActive(false); //disable rendered objects
+            GetComponent<CapsuleCollider>().enabled = false; //disable collider
         }
 
     }
@@ -78,6 +79,7 @@ public class ServerClient : player{
 
     public void runQueue()
     {
+        //run through all inputs that server has recieved
         string msg = ConnectionID + "|";
         for (int i = 0; i < inputQueue.Count; i++)
         {
@@ -100,8 +102,10 @@ public class ServerClient : player{
                     break;
             }
         }
+        //send result of inputs and last input that was processed to the player this object is responsible for
         server.SendToPlayer("INPUTPROCESSED|" + inputCount + "|" + transform.position.x + "/" + transform.position.y + "/" + transform.position.z + "|" + transform.rotation.x + "/" + transform.rotation.y + "|", ConnectionID, reliableChannelId);
         lastInputProcessed = inputCount;
+        //gets all inputs that have been processed and removes them
         IEnumerable<string> query = inputQueue.Where(x => int.Parse(x[0].ToString()) <= inputCount).OrderBy(n => n);
         foreach (string item in query)
         {

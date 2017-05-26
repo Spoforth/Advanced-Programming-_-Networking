@@ -21,6 +21,7 @@ public class ServerTest : MonoBehaviour {
     
     void Start()
     {
+        //NETWORK SETUP
         NetworkTransport.Init();
         ConnectionConfig config = new ConnectionConfig();
         reliableChannelId = config.AddChannel(QosType.Reliable); ;
@@ -28,8 +29,8 @@ public class ServerTest : MonoBehaviour {
         hostId = NetworkTransport.AddHost(topology, socketPort, null); // null means anyone can join, used for servers
         Debug.Log("Socket Open. Host ID is " + hostId);
         isStarted = true;
-
-        coroutine = ExecuteAfterTime(0.2f);
+        //server timestep, updates positions and sends them every tick
+        coroutine = ExecuteAfterTime(0.1f);
         StartCoroutine(coroutine);
     }
 
@@ -49,10 +50,10 @@ public class ServerTest : MonoBehaviour {
             case NetworkEventType.ConnectEvent:
                 Debug.Log("Connection event recieved. recHostID: "  + recHostId + " recConnedID: " + recConnectionId);
                 GameObject clone = Instantiate(playerObject, transform.position, transform.rotation);
-                clients.Add(recConnectionId, clone);
+                clients.Add(recConnectionId, clone); //add new player object to dictionary, recConnectionId serves as playerID
                 ServerClient cloneSC = clone.GetComponent<ServerClient>();
-                cloneSC.ConnectionID = recConnectionId;
-                string message = "PLAYERS|";
+                cloneSC.ConnectionID = recConnectionId; //tell the ServerClient which person they're responsible for and who to send their data to.
+                string message = "PLAYERS|"; //tell other players a new player has joined
                 foreach (KeyValuePair<int, GameObject> c in clients)
                 {
                     message += c.Key.ToString() + "/" + c.Value.transform.position.x.ToString() + "/" + c.Value.transform.position.y.ToString() + "/" + c.Value.transform.position.z.ToString() + "|";
@@ -62,9 +63,10 @@ public class ServerTest : MonoBehaviour {
             case NetworkEventType.DataEvent:
                 GameObject playerOBJ = clients[recConnectionId];
                 ServerClient player = playerOBJ.GetComponent<ServerClient>();
-                player.addToQueue(recBuffer);
+                player.addToQueue(recBuffer); //input updates handled by ServerClient, add them to queue so that no inputs are lost
                 break;
             case NetworkEventType.DisconnectEvent:
+                //destroy player on disconnect, tell everyone to do the same
                 Destroy(clients[recConnectionId]);
                 clients.Remove(recConnectionId);
                 Send("DC|" + recConnectionId, reliableChannelId);
@@ -77,7 +79,7 @@ public class ServerTest : MonoBehaviour {
 
     }
 
-    public void Send(string message, int channelID)
+    public void Send(string message, int channelID) //send message to every player in clients
     {
         byte error;
         Debug.Log("Sending: " + message);
@@ -88,7 +90,7 @@ public class ServerTest : MonoBehaviour {
         }
     }
 
-    public void SendToPlayer(string message, int channelID, int cnID)
+    public void SendToPlayer(string message, int channelID, int cnID) //send message to specific player
     {
         byte error;
         Debug.Log("Sending to host" + hostId + " : " + message);
@@ -101,7 +103,7 @@ public class ServerTest : MonoBehaviour {
         StartCoroutine("SpawnPlayer", playerID);
     }
 
-    IEnumerator ExecuteAfterTime(float time)
+    IEnumerator ExecuteAfterTime(float time) //update player data and send it to each player
     {
         string msg = "UPDATE";
         foreach (KeyValuePair<int, GameObject> entry in clients)
@@ -109,6 +111,7 @@ public class ServerTest : MonoBehaviour {
             GameObject obj = entry.Value;
             ServerClient sc = obj.GetComponent<ServerClient>();
             sc.runQueue();
+            //insert characters to split string so each value is easier to track
             msg += entry.Key + "|" + entry.Value.transform.position.x + "/" + entry.Value.transform.position.y + "/" + entry.Value.transform.position.z + "|" + entry.Value.transform.rotation.x + "/" + entry.Value.transform.rotation.y + "|" + sc.health + "|" + sc.isDead.ToString() + "|" + sc.firing.ToString() + "|";
         }
         Debug.Log("Updating Positions. Message is: " + msg);
@@ -118,13 +121,14 @@ public class ServerTest : MonoBehaviour {
 
     IEnumerator SpawnPlayer(int playerID)
     {
-        yield return new WaitForSeconds(respawnTime);
-        int index = Random.Range(0, spawnPoints.Length);
-        GameObject player = clients[playerID];
-        player.transform.position = spawnPoints[index].position;
-        ServerClient sc = player.GetComponent<ServerClient>();
-        sc.isDead = false;
+        yield return new WaitForSeconds(respawnTime); //wait for respawn timer to expire
+        int index = Random.Range(0, spawnPoints.Length); //pick random spawn point
+        GameObject player = clients[playerID]; 
+        player.transform.position = spawnPoints[index].position; //move player to their new position
+        ServerClient sc = player.GetComponent<ServerClient>(); 
+        sc.isDead = false; //tell them they're no longer dead
         sc.health = sc.maxHealth;
-        player.transform.GetChild(0).gameObject.SetActive(true);
+        player.transform.GetChild(0).gameObject.SetActive(true); //turn on renderers
+        player.GetComponent<CapsuleCollider>().enabled = true;
     }
 }

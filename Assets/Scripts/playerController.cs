@@ -55,7 +55,7 @@ public class playerController : player {
         head.transform.localRotation = Quaternion.Euler(head.transform.eulerAngles.x, 0, 0);
     }
 
-    IEnumerator fireLaser()
+    IEnumerator fireLaser() //visual only, actual damage handled by server
     {
         line = rayOrigin.GetComponent<LineRenderer>();
         line.enabled = true;

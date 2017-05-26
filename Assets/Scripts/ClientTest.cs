@@ -12,6 +12,7 @@ public class ClientTest : MonoBehaviour {
     int maxConnections = 10;
     int reliableChannelId;
     int hostId;
+    int myPlayerID;
     playerController player;
     string ipAddress;
     int health = 100;
@@ -56,10 +57,15 @@ public class ClientTest : MonoBehaviour {
 
                 switch (splitData[0])
                 {
+                    case "PLAYERID":
+                        myPlayerID = int.Parse(splitData[1]);
+                        GameObject playerOBJ = Instantiate(playerPrefab, transform.position, transform.rotation);
+                        playerList.Add(myPlayerID, playerOBJ);
+                        break;
                     case "PLAYERS":
                         //spawn all players at their positions, sent whenever server gets new connection
                         Debug.Log("Player connected to server. message" + msg);
-                        for (int i = 1; i <= splitData.Length; i++)
+                        for (int i = 1; i < splitData.Length; i++)
                         {
                             string[] message = splitData[i].Split('/');
                             int playerID = int.Parse(message[0]);
@@ -79,8 +85,9 @@ public class ClientTest : MonoBehaviour {
                         break;
                     case "UPDATE":
                         //updates the positions of each player that isn't the client
-                        for(int i = 1; i <= splitData.Length; i++)
+                        for(int i = 1; i < splitData.Length; i++)
                         {
+                            //Debug.Log(splitData[i]);
                             string[] positionData = splitData[i].Split('/');
                             //0 is player ID
                             //1 is position x
@@ -92,9 +99,9 @@ public class ClientTest : MonoBehaviour {
                             //7 is bool isDead
                             //8 is bool isFiring
                             int playerID = int.Parse(positionData[0]);
-                            if (playerID == connectionId) //if this position is the clients, skip the iteration
+                            if (playerID == myPlayerID) //if this position is the clients, skip the iteration
                             {
-                                health = int.Parse(splitData[6]);
+                                health = int.Parse(positionData[6]);
                                 continue;
                             }
                             GameObject obj = playerList[playerID];
@@ -165,14 +172,12 @@ public class ClientTest : MonoBehaviour {
         if ((NetworkError)error == NetworkError.Ok) //only run if connection was succesful
         {
             Debug.Log("Connected to Server. Connection ID: " + connectionId);
-            GameObject obj = Instantiate(playerPrefab, transform.position, transform.rotation);
-            playerList.Add(connectionId, obj);
+            UICanvas.enabled = false;
         }
         else //report error on failure
         {
             Debug.LogError("NETWORK ERROR CODE:" + error.ToString());
         }
-        UICanvas.enabled = false;
     }
 
     public void Disconnect()

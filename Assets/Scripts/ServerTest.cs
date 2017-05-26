@@ -13,6 +13,7 @@ public class ServerTest : MonoBehaviour {
     int reliableChannelId;
     int hostId;
     int socketPort = 8888;
+    int playerCount;
     private IEnumerator coroutine;
     public float respawnTime = 3f;
     public Dictionary<int, GameObject> clients = new Dictionary<int, GameObject>();
@@ -46,15 +47,17 @@ public class ServerTest : MonoBehaviour {
         switch (recNetworkEvent)
         {
             case NetworkEventType.ConnectEvent:
+                playerCount++;
                 Debug.Log("Connection event recieved. recHostID: "  + recHostId + " recConnedID: " + recConnectionId);
                 GameObject clone = Instantiate(playerObject, transform.position, transform.rotation);
-                clients.Add(recConnectionId, clone); //add new player object to dictionary, recConnectionId serves as playerID
+                clients.Add(playerCount, clone); //add new player object to dictionary, recConnectionId serves as playerID
                 ServerClient cloneSC = clone.GetComponent<ServerClient>();
                 cloneSC.ConnectionID = recConnectionId; //tell the ServerClient which person they're responsible for and who to send their data to.
-                string message = "PLAYERS|"; //tell other players a new player has joined
+                SendToPlayer("PLAYERID|" + playerCount, reliableChannelId, recConnectionId);
+                string message = "PLAYERS"; //tell other players a new player has joined
                 foreach (KeyValuePair<int, GameObject> c in clients)
                 {
-                    message += c.Key.ToString() + "/" + c.Value.transform.position.x.ToString() + "/" + c.Value.transform.position.y.ToString() + "/" + c.Value.transform.position.z.ToString() + "|";
+                    message += "|" + c.Key.ToString() + "/" + c.Value.transform.position.x.ToString() + "/" + c.Value.transform.position.y.ToString() + "/" + c.Value.transform.position.z.ToString();
                 }
                 Send(message, reliableChannelId);
                 break;
@@ -105,14 +108,14 @@ public class ServerTest : MonoBehaviour {
     {
         while (true)
         {
-            string msg = "UPDATE|";
+            string msg = "UPDATE";
             foreach (KeyValuePair<int, GameObject> entry in clients)
             {
                 GameObject obj = entry.Value;
                 ServerClient sc = obj.GetComponent<ServerClient>();
                 sc.runQueue();
                 //insert characters to split string so each value is easier to track
-                msg += entry.Key + "/" + entry.Value.transform.position.x + "/" + entry.Value.transform.position.y + "/" + entry.Value.transform.position.z + "/" + entry.Value.transform.rotation.x + "/" + entry.Value.transform.rotation.y + "/" + sc.health + "/" + sc.isDead.ToString() + "/" + sc.firing.ToString() + "|";
+                msg += "|" + entry.Key + "/" + entry.Value.transform.position.x + "/" + entry.Value.transform.position.y + "/" + entry.Value.transform.position.z + "/" + entry.Value.transform.rotation.x + "/" + entry.Value.transform.rotation.y + "/" + sc.health + "/" + sc.isDead.ToString() + "/" + sc.firing.ToString();
             }
             //Debug.Log("Updating Positions. Message is: " + msg);
             Send(msg, reliableChannelId);

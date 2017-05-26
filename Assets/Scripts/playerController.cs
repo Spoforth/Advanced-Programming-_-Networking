@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class playerController : player {
 
-    Rigidbody rb;
     ClientTest client;
     public GameObject rayOrigin;
     public GameObject head;
@@ -13,7 +12,6 @@ public class playerController : player {
 
 	void Start () 
     {
-        rb = GetComponent<Rigidbody>();
         GameObject temp = GameObject.FindGameObjectWithTag("Client");
         client = temp.GetComponent<ClientTest>();
         Cursor.visible = false;
@@ -31,7 +29,7 @@ public class playerController : player {
             if (xMov != 0 || zMov != 0)
             {
                 Move(xMov, zMov);
-                client.send("MOVE|" + xMov.ToString());
+                client.send("MOVE|" + xMov.ToString() + "|" + zMov.ToString());
             }
 
             if (Input.GetKeyDown(KeyCode.Mouse0))

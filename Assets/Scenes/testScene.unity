@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d73717468fe592459ed2044c76c3620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 1845851180741940, guid: 016cfdf5035b111469ac795703c84dbd,
+  playerObject: {fileID: 1707790607088794, guid: 016cfdf5035b111469ac795703c84dbd,
     type: 2}
   respawnTime: 3
   spawnPoints:

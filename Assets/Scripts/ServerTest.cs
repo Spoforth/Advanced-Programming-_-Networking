@@ -13,7 +13,6 @@ public class ServerTest : MonoBehaviour {
     int reliableChannelId;
     int hostId;
     int socketPort = 8888;
-    bool isStarted = false;
     private IEnumerator coroutine;
     public float respawnTime = 3f;
     public Dictionary<int, GameObject> clients = new Dictionary<int, GameObject>();
@@ -28,7 +27,6 @@ public class ServerTest : MonoBehaviour {
         HostTopology topology = new HostTopology(config, maxConnections);
         hostId = NetworkTransport.AddHost(topology, socketPort, null); // null means anyone can join, used for servers
         Debug.Log("Socket Open. Host ID is " + hostId);
-        isStarted = true;
         //server timestep, updates positions and sends them every tick
         coroutine = ExecuteAfterTime(0.1f);
         StartCoroutine(coroutine);
@@ -105,27 +103,30 @@ public class ServerTest : MonoBehaviour {
 
     IEnumerator ExecuteAfterTime(float time) //update player data and send it to each player
     {
-        string msg = "UPDATE";
-        foreach (KeyValuePair<int, GameObject> entry in clients)
+        while (true)
         {
-            GameObject obj = entry.Value;
-            ServerClient sc = obj.GetComponent<ServerClient>();
-            sc.runQueue();
-            //insert characters to split string so each value is easier to track
-            msg += entry.Key + "|" + entry.Value.transform.position.x + "/" + entry.Value.transform.position.y + "/" + entry.Value.transform.position.z + "|" + entry.Value.transform.rotation.x + "/" + entry.Value.transform.rotation.y + "|" + sc.health + "|" + sc.isDead.ToString() + "|" + sc.firing.ToString() + "|";
+            string msg = "UPDATE|";
+            foreach (KeyValuePair<int, GameObject> entry in clients)
+            {
+                GameObject obj = entry.Value;
+                ServerClient sc = obj.GetComponent<ServerClient>();
+                sc.runQueue();
+                //insert characters to split string so each value is easier to track
+                msg += entry.Key + "/" + entry.Value.transform.position.x + "/" + entry.Value.transform.position.y + "/" + entry.Value.transform.position.z + "/" + entry.Value.transform.rotation.x + "/" + entry.Value.transform.rotation.y + "/" + sc.health + "/" + sc.isDead.ToString() + "/" + sc.firing.ToString() + "|";
+            }
+            //Debug.Log("Updating Positions. Message is: " + msg);
+            Send(msg, reliableChannelId);
+            yield return new WaitForSeconds(time);
         }
-        Debug.Log("Updating Positions. Message is: " + msg);
-        Send(msg, reliableChannelId);
-        yield return new WaitForSeconds(time);
     }
 
     IEnumerator SpawnPlayer(int playerID)
     {
         yield return new WaitForSeconds(respawnTime); //wait for respawn timer to expire
         int index = Random.Range(0, spawnPoints.Length); //pick random spawn point
-        GameObject player = clients[playerID]; 
+        GameObject player = clients[playerID];
         player.transform.position = spawnPoints[index].position; //move player to their new position
-        ServerClient sc = player.GetComponent<ServerClient>(); 
+        ServerClient sc = player.GetComponent<ServerClient>();
         sc.isDead = false; //tell them they're no longer dead
         sc.health = sc.maxHealth;
         player.transform.GetChild(0).gameObject.SetActive(true); //turn on renderers

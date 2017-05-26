@@ -319,9 +319,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186a2b1a1787f3e49a0f0544ebe57f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 1876733772924474, guid: 75383d47915fde8449668f32b6097a9d,
+  playerPrefab: {fileID: 1947147548273864, guid: 75383d47915fde8449668f32b6097a9d,
     type: 2}
-  otherPlayers: {fileID: 1602859481798256, guid: a3d8dbd12269aad49901bcc0d84bfb12,
+  otherPlayers: {fileID: 1621389288456420, guid: 7f896722a68942c4d83cf6e4bd82e966,
     type: 2}
   inputCount: 0
   inputLimit: 0

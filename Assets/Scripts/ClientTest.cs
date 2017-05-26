@@ -32,7 +32,7 @@ public class ClientTest : MonoBehaviour {
         ConnectionConfig config = new ConnectionConfig();
         reliableChannelId = config.AddChannel(QosType.Reliable);
         HostTopology topology = new HostTopology(config, maxConnections);
-        hostId = NetworkTransport.AddHost(topology, 8000);
+        hostId = NetworkTransport.AddHost(topology, 0);
         Debug.Log("Socket Open. Host ID is " + hostId);
 	}
 	
@@ -56,8 +56,9 @@ public class ClientTest : MonoBehaviour {
 
                 switch (splitData[0])
                 {
-                    case "PLAYER":
+                    case "PLAYERS":
                         //spawn all players at their positions, sent whenever server gets new connection
+                        Debug.Log("Player connected to server. message" + msg);
                         for (int i = 1; i <= splitData.Length; i++)
                         {
                             string[] message = splitData[i].Split('/');
@@ -80,18 +81,29 @@ public class ClientTest : MonoBehaviour {
                         //updates the positions of each player that isn't the client
                         for(int i = 1; i <= splitData.Length; i++)
                         {
-                            int playerID = int.Parse(splitData[1]);
+                            string[] positionData = splitData[i].Split('/');
+                            //0 is player ID
+                            //1 is position x
+                            //2 is position y
+                            //3 is position z
+                            //4 is rotation x
+                            //5 is rotation y
+                            //6 is health
+                            //7 is bool isDead
+                            //8 is bool isFiring
+                            int playerID = int.Parse(positionData[0]);
                             if (playerID == connectionId) //if this position is the clients, skip the iteration
                             {
+                                health = int.Parse(splitData[6]);
                                 continue;
                             }
                             GameObject obj = playerList[playerID];
                             Vector3 oldPos = playerList[playerID].transform.position;
                             Vector3 oldRot = playerList[playerID].transform.eulerAngles;
-                            Vector3 pos =  new Vector3(float.Parse(splitData[3]), float.Parse(splitData[3]), float.Parse(splitData[4])); //get x y z position from data sent
+                            Vector3 pos =  new Vector3(float.Parse(positionData[1]), float.Parse(positionData[2]), float.Parse(positionData[3])); //get x y z position from data sent
                             obj.transform.position = Vector3.Lerp(oldPos, pos, 0.1f); //lerp to new position 
-                            obj.transform.rotation = Quaternion.FromToRotation(oldRot, new Vector3(0, float.Parse(splitData[4]), 0)); //rotate body
-                            obj.transform.GetChild(0).transform.rotation = Quaternion.FromToRotation(oldRot, new Vector3(float.Parse(splitData[5]), 0, 0)); //rotate head
+                            obj.transform.rotation = Quaternion.FromToRotation(oldRot, new Vector3(0, float.Parse(positionData[4]), 0)); //rotate body
+                            obj.transform.GetChild(0).transform.rotation = Quaternion.FromToRotation(oldRot, new Vector3(float.Parse(positionData[5]), 0, 0)); //rotate head
                         }
                         break;
                     case "INPUTPROCESSED":
@@ -149,11 +161,12 @@ public class ClientTest : MonoBehaviour {
 
     public void Connect()
     {
-        connectionId = NetworkTransport.Connect(hostId, "127.0.0.1", 0, 0, out error);
+        connectionId = NetworkTransport.Connect(hostId, "127.0.0.1", 8888, 0, out error);
         if ((NetworkError)error == NetworkError.Ok) //only run if connection was succesful
         {
             Debug.Log("Connected to Server. Connection ID: " + connectionId);
-            Instantiate(playerPrefab, transform.position, transform.rotation);
+            GameObject obj = Instantiate(playerPrefab, transform.position, transform.rotation);
+            playerList.Add(connectionId, obj);
         }
         else //report error on failure
         {

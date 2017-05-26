@@ -17,18 +17,620 @@ Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Net
 Loading C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.020 seconds
+- Completed reload, in  0.021 seconds
 Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3200x1080 at -1280,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.184647 ms
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1d34 -> priority: 1 
-  Thread -> id: 1100 -> priority: 1 
+UnloadTime: 1.091968 ms
 Socket Open. Host ID is 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2df8 -> priority: 1 
+  Thread -> id: 2544 -> priority: 1 
+Connected to Server. Connection ID: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: PLAYERS|1/0/0/0|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|-4.097819E-08/-1.490116E-08/-1.080334E-07|2.328306E-10/2.182787E-11|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|-5.029142E-08/-1.490116E-08/-7.078052E-08|2.328306E-10/2.182787E-11|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|-6.146729E-08/-1.490116E-08/-2.607703E-08|2.328306E-10/2.182787E-11|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|0.05096158/-1.51622E-08/1.117365E-08|2.328306E-10/2.182787E-11|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|1.807891/-2.390063E-08/9.305557E-08|2.328306E-10/2.182787E-11|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|6.013083/-5.134246E-08/1.749051E-07|2.328306E-10/2.182787E-11|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|12.51841/-1.525314E-07/6.304594E-08|2.328306E-10/2.182787E-11|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|19.21181/-1.448273E-07/-4.248779E-07|2.095475E-09/1.455191E-11|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|23.7579/-8.077402E-08/-4.024306E-07|1.280569E-09/1.091394E-11|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|25.84497/-9.42663E-08/-3.911555E-07|1.629815E-09/0|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|25.99394/-8.975381E-08/-3.911555E-07|1.629815E-09/0|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|25.99394/-1.043081E-07/-8.903444E-07|3.259628E-09/3.637978E-12|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|25.23347/-1.004128E-07/-1.091504E-06|3.259628E-09/3.637978E-12|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|22.66555/-6.13522E-08/-1.091566E-06|4.423782E-09/-1.091394E-11|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|21.88926/-7.052945E-08/-1.091527E-06|4.423782E-09/-1.091394E-11|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|21.88926/-8.940697E-08/-1.09151E-06|5.355105E-09/-1.455192E-11|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|21.88926/-7.450581E-08/-1.09151E-06|5.355105E-09/-1.455192E-11|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|21.388/-7.217162E-08/-1.091525E-06|5.355105E-09/-1.455192E-11|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|18.68604/-7.682496E-08/-1.151665E-06|1.769513E-08/-1.018634E-10|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.93042/-8.04142E-08/-1.132846E-06|1.769513E-08/-1.018634E-10|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/-8.914129E-08/-1.132499E-06|1.769513E-08/-1.018634E-10|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/-7.450581E-08/-1.132488E-06|1.769513E-08/-1.018634E-10|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/-7.450581E-08/-1.132488E-06|1.769401E-08/-0.0004363324|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/-4.470348E-08/-1.877546E-06|2.009841E-08/-0.02050627|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/8.940697E-08/-3.624707E-06|2.667179E-08/-0.0980171|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/-1.639128E-07/-5.13345E-06|2.781292E-08/-0.1955183|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/-1.639128E-07/-7.18981E-06|2.793042E-08/-0.2907023|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/2.980232E-08/-1.064688E-05|2.753028E-08/-0.3636577|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/-1.490116E-07/-1.370162E-05|2.728814E-08/-0.4059394|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/1.043081E-07/-1.602992E-05|2.636559E-08/-0.4138986|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/-2.980232E-08/-1.848862E-05|2.639091E-08/-0.4071349|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/1.341105E-07/-2.074987E-05|2.547965E-08/-0.401548|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/0/-2.194196E-05|2.501185E-08/-0.3717727|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/-4.470348E-08/-2.510846E-05|2.510956E-08/-0.3226797|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/-2.235174E-07/-2.782792E-05|2.486732E-08/-0.2810865|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/4.470348E-08/-2.917275E-05|2.881796E-08/-0.2482683|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87855/-5.960464E-08/-3.143027E-05|2.936153E-08/-0.2270774|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/2.980232E-08/-3.376976E-05|3.239434E-08/-0.2181446|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/-4.470348E-08/-3.494695E-05|2.689193E-08/-0.2181448|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/1.490116E-08/-3.505871E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/1.490116E-08/-3.509596E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Initialize engine version: 5.6.0f3 (497a0f351392)
+GfxDevice: creating device client; threaded=1
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 660 (ID=0x11c0)
+    Vendor:   NVIDIA
+    VRAM:     1989 MB
+    Driver:   21.21.13.7866
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.021 seconds
+Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Jonathon\Documents\GitHub\Advanced-Programming-_-Networking\CLIENT\client_Data\Managed\System.dll (this message is harmless)
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+desktop: 1920x1080 60Hz; virtual: 3200x1080 at -1280,0
+<RI> Initializing input.
+<RI> Input initialized.
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+<RI> Initialized touch support.
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+UnloadTime: 1.102723 ms
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Socket Open. Host ID is 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2c68 -> priority: 1 
+  Thread -> id: 2df0 -> priority: 1 
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -36,2100 +638,437 @@ Connected to Server. Connection ID: 1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-reactor filed to acomplish request with code {1234}, bytesReceived {0}
-Attempt to send to not connected connection {1}
+Receiving: PLAYERS|1/16.87854/7.450581E-08/-3.510714E-05|2/0/0/0|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: PLAYERS|1/16.87854/7.450581E-08/-3.510714E-05|2/0/0/0|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|0/0/0|0/0|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|0/0/0|0/0|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-4.470348E-08/-1.490116E-08/-9.313226E-08|2.328306E-10/2.182787E-11|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-4.470348E-08/-1.490116E-08/-9.313226E-08|2.328306E-10/2.182787E-11|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-5.587935E-08/-1.490116E-08/-4.842877E-08|2.328306E-10/2.182787E-11|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-5.587935E-08/-1.490116E-08/-4.842877E-08|2.328306E-10/2.182787E-11|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-6.705523E-08/-1.490116E-08/-3.72529E-09|2.328306E-10/2.182787E-11|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-6.705523E-08/-1.490116E-08/-3.72529E-09|2.328306E-10/2.182787E-11|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-7.078052E-08/-1.490116E-08/1.117587E-08|2.417693E-10/0.003490652|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-7.078052E-08/-1.490116E-08/1.117587E-08|2.417693E-10/0.003490652|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|3.110617E-07/1.788139E-07/-6.854534E-07|-2.248781E-10/0.03707977|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|3.110617E-07/1.788139E-07/-6.854534E-07|-2.248781E-10/0.03707977|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|5.51343E-07/1.937151E-07/-1.244247E-06|-1.479417E-08/0.1149373|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|5.51343E-07/1.937151E-07/-1.244247E-06|-1.479417E-08/0.1149373|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|7.82311E-08/-2.980232E-08/-2.935529E-06|-1.894975E-08/0.1968022|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|7.82311E-08/-2.980232E-08/-2.935529E-06|-1.894975E-08/0.1968022|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|1.117587E-08/2.980232E-08/-4.000962E-06|-1.848685E-08/0.2393811|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|1.117587E-08/2.980232E-08/-4.000962E-06|-1.848685E-08/0.2393811|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-3.948808E-07/-1.043081E-07/-4.909933E-06|-1.615197E-08/0.3131639|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-3.948808E-07/-1.043081E-07/-4.909933E-06|-1.615197E-08/0.3131639|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.02818E-06/-2.980232E-08/-6.12624E-06|-1.0314E-08/0.368936|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.02818E-06/-2.980232E-08/-6.12624E-06|-1.0314E-08/0.368936|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.639128E-06/1.490116E-08/-7.028691E-06|-1.062855E-08/0.5674847|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.639128E-06/1.490116E-08/-7.028691E-06|-1.062855E-08/0.5674847|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.302229E-06/-2.980232E-08/-7.515773E-06|-3.358828E-08/0.7949443|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.605841E-06/-1.937151E-07/-6.552786E-06|-2.80648E-08/0.8429223|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.596527E-06/1.043081E-07/-5.431473E-06|-2.58442E-08/0.8429225|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.596527E-06/1.043081E-07/-5.431473E-06|-2.58442E-08/0.8429225|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.62633E-06/1.490116E-08/-5.319715E-06|-2.677552E-08/0.8429225|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.62633E-06/1.490116E-08/-5.319715E-06|-2.677552E-08/0.8429225|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.667308E-06/7.450581E-08/-5.159527E-06|-2.863816E-08/0.8429225|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.667308E-06/7.450581E-08/-5.159527E-06|-2.863816E-08/0.8429225|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.682209E-06/1.043081E-07/-5.085021E-06|-2.887099E-08/0.8429225|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.682209E-06/1.043081E-07/-5.085021E-06|-2.887513E-08/0.8403305|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.682209E-06/1.043081E-07/-5.085021E-06|-2.887513E-08/0.8403305|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.518296E-06/-7.450581E-08/-4.459172E-06|-2.909283E-08/0.8410393|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.27429E-06/1.192093E-07/-4.053116E-06|-2.95776E-08/0.8405669|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.27429E-06/1.192093E-07/-4.053116E-06|-2.95776E-08/0.8405669|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.143905E-06/-1.490116E-07/-3.72529E-06|-2.444559E-08/0.8403298|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-2.143905E-06/-1.490116E-07/-3.72529E-06|-2.444559E-08/0.8403298|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.942739E-06/-1.490116E-08/-3.479421E-06|-2.537854E-08/0.8403296|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.942739E-06/-1.490116E-08/-3.479421E-06|-2.537854E-08/0.8403296|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.801178E-06/-1.937151E-07/-3.281981E-06|-2.468004E-08/0.8403296|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.801178E-06/-1.937151E-07/-3.281981E-06|-2.468004E-08/0.8403296|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.739711E-06/-1.937151E-07/-3.185123E-06|-2.468004E-08/0.8403296|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.739711E-06/-1.937151E-07/-3.185123E-06|-2.468004E-08/0.8403296|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.683831E-06/-2.086163E-07/-3.121793E-06|-2.468004E-08/0.8403296|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.683831E-06/-2.086163E-07/-3.121793E-06|-2.468004E-08/0.8403296|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.652166E-06/-2.086163E-07/-3.080815E-06|-2.465045E-08/0.8374798|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.652166E-06/-2.086163E-07/-3.080815E-06|-2.465045E-08/0.8374798|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.38022E-06/1.192093E-07/-2.525747E-06|-1.629733E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.38022E-06/1.192093E-07/-2.525747E-06|-1.629733E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.261011E-06/0/-2.343208E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.261011E-06/0/-2.343208E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.192093E-06/0/-2.268702E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.192093E-06/0/-2.268702E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.125038E-06/0/-2.212822E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.125038E-06/0/-2.212822E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-reactor filed to acomplish request with code {1234}, bytesReceived {0}
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Attempt to send to not connected connection {1}
+Receiving: UPDATE1|16.87854/7.450581E-08/-3.510714E-05|2.485467E-08/-0.218145|0|False|False|2|-1.089647E-06/0/-2.179295E-06|-1.722947E-08/0.8372411|0|False|False|
  
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 reactor filed to acomplish request with code {1234}, bytesReceived {0}
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
 reactor filed to acomplish request with code {1234}, bytesReceived {0}
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
 reactor filed to acomplish request with code {1234}, bytesReceived {0}
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
-Attempt to send to not connected connection {1}
- 
-(Filename:  Line: 359)
-
+reactor filed to acomplish request with code {1234}, bytesReceived {0}
+reactor filed to acomplish request with code {1234}, bytesReceived {0}
+reactor filed to acomplish request with code {1234}, bytesReceived {0}
+reactor filed to acomplish request with code {1234}, bytesReceived {0}
+reactor filed to acomplish request with code {1234}, bytesReceived {0}
+Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:8888}
+Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:8888}

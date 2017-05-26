@@ -19,7 +19,7 @@ public class ServerClient : player{
     public Transform rayOrigin;
     public bool firing;
     public Rigidbody rb;
-    List<string> inputQueue = new List<string>();
+    public List<string> inputQueue = new List<string>();
     int inputCount = 0; //how many inputs have been sent
     int lastInputProcessed = 0;
 
@@ -71,6 +71,14 @@ public class ServerClient : player{
 
     }
 
+    public override void Turn(float xRot, float yRot)
+    {
+        transform.Rotate(0, yRot, 0);
+        Transform headTransform = transform.GetChild(0);
+        headTransform.Rotate(-xRot, 0, 0);
+        headTransform.localRotation = Quaternion.Euler(headTransform.eulerAngles.x, 0, 0);
+    }
+
     public void addToQueue(byte[] packet)
     {
         string inputString = Encoding.Unicode.GetString(packet);
@@ -80,6 +88,7 @@ public class ServerClient : player{
     public void runQueue()
     {
         //run through all inputs that server has recieved
+        Debug.Log("Running Queue");
         string msg = ConnectionID + "|";
         for (int i = 0; i < inputQueue.Count; i++)
         {
@@ -105,16 +114,7 @@ public class ServerClient : player{
         //send result of inputs and last input that was processed to the player this object is responsible for
         server.SendToPlayer("INPUTPROCESSED|" + inputCount + "|" + transform.position.x + "/" + transform.position.y + "/" + transform.position.z + "|" + transform.rotation.x + "/" + transform.rotation.y + "|", ConnectionID, reliableChannelId);
         lastInputProcessed = inputCount;
-        //gets all inputs that have been processed and removes them
-        IEnumerable<string> query = inputQueue.Where(x => int.Parse(x[0].ToString()) <= inputCount).OrderBy(n => n);
-        foreach (string item in query)
-        {
-            inputQueue.Remove(item);
-        }
-    }
-
-    public bool checkInputNumber(string s)
-    {
-        return s.StartsWith(inputCount.ToString());
+        //empties queue
+        inputQueue.Clear();
     }
 }

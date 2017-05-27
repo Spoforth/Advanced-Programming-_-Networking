@@ -29,19 +29,26 @@ public class playerController : player {
             if (xMov != 0 || zMov != 0)
             {
                 Move(xMov, zMov);
-                client.send("MOVE|" + xMov.ToString() + "|" + zMov.ToString());
+                MessageGeneric moveMessage = new MessageGeneric(2, "MOVE");
+                moveMessage.setDataAt(0, xMov.ToString());
+                moveMessage.setDataAt(1, zMov.ToString());
+                client.send(MessageConverter.messageToString(moveMessage));
             }
 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 Shoot();
-                client.send("SHOOT");
+                MessageGeneric shootMessage = new MessageGeneric(1, "SHOOT");
+                client.send(MessageConverter.messageToString(shootMessage));
             }
 
             if (yLook != 0 || xLook != 0)
             {
                 Turn(yLook, xLook);
-                client.send("TURN|" + yLook.ToString() + "/" + xLook.ToString() + "|");
+                MessageGeneric turnMessage = new MessageGeneric(2, "TURN");
+                turnMessage.setDataAt(0, xLook.ToString());
+                turnMessage.setDataAt(1, yLook.ToString());
+                client.send(MessageConverter.messageToString(turnMessage));
             }
         }
 	}

@@ -11,6 +11,7 @@ public class ClientTest : MonoBehaviour {
     int connectionId;
     int maxConnections = 10;
     int reliableChannelId;
+    int unreliableChannelId;
     int hostId;
     int myPlayerID;
     playerController player;
@@ -32,6 +33,7 @@ public class ClientTest : MonoBehaviour {
         NetworkTransport.Init();
         ConnectionConfig config = new ConnectionConfig();
         reliableChannelId = config.AddChannel(QosType.Reliable);
+        unreliableChannelId = config.AddChannel(QosType.Unreliable);
         HostTopology topology = new HostTopology(config, maxConnections);
         hostId = NetworkTransport.AddHost(topology, 0);
         Debug.Log("Socket Open. Host ID is " + hostId);
@@ -53,42 +55,49 @@ public class ClientTest : MonoBehaviour {
                 //conver package from bytes to string, split data into an array, then choose what to do with that data
                 string msg = Encoding.Unicode.GetString(recBuffer, 0, dataSize);
                 Debug.Log("Receiving: " + msg);
-                string[] splitData = msg.Split('|');
-
-                switch (splitData[0])
+                MessageGeneric message = MessageConverter.stringToMessage(msg);
+                switch (message.getMessageID())
                 {
                     case "PLAYERID":
-                        myPlayerID = int.Parse(splitData[1]);
-                        GameObject playerOBJ = Instantiate(playerPrefab, transform.position, transform.rotation);
-                        playerList.Add(myPlayerID, playerOBJ);
+                        myPlayerID = int.Parse(message.getDataAt(0));
                         break;
-                    case "PLAYERS":
-                        //spawn all players at their positions, sent whenever server gets new connection
-                        Debug.Log("Player connected to server. message" + msg);
-                        for (int i = 1; i < splitData.Length; i++)
+                    case "PLAYERSETUP":
+                        //spawn all players at their positions
+                        int _playerID = int.Parse(message.getDataAt(0));
+                        float playerX = float.Parse(message.getDataAt(1));
+                        float playerY = float.Parse(message.getDataAt(2));
+                        float playerZ = float.Parse(message.getDataAt(3));
+                        float playerRotX = float.Parse(message.getDataAt(4));
+                        float playerRotY = float.Parse(message.getDataAt(5));
+                        if (_playerID == myPlayerID) //spawns player object
                         {
-                            string[] message = splitData[i].Split('/');
-                            int playerID = int.Parse(message[0]);
-                            float playerX = float.Parse(message[1]);
-                            float playerY = float.Parse(message[2]);
-                            float playerZ = float.Parse(message[3]);
-                            if (playerList.ContainsKey(int.Parse(message[0]))) //if player has already been spawned, skip this iteration
-                            {
-                                continue;
-                            }
-                            else
-                            {
-                                GameObject newPlayer = Instantiate(otherPlayers, new Vector3(playerX, playerY, playerZ), transform.rotation);
-                                playerList.Add(playerID, newPlayer);
-                            }
+                            GameObject playerOBJ = Instantiate(playerPrefab, new Vector3(playerX, playerY, playerZ), new Quaternion(playerRotX, playerRotY, 0, 0));
+                            playerList.Add(myPlayerID, playerOBJ);
+                        }
+                        else //spawns other players
+                        {
+                            GameObject newPlayer = Instantiate(otherPlayers, new Vector3(playerX, playerY, playerZ), new Quaternion(playerRotX, playerRotY, 0, 0));
+                            playerList.Add(_playerID, newPlayer);
+                        }
+                        break;
+                    case "NEWPLAYER":
+                        //spawns a new player when they connect to the server
+                        if (int.Parse(message.getDataAt(0)) == myPlayerID)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            Debug.Log("Spawning new player");
+                            GameObject newPlayer = Instantiate(otherPlayers, new Vector3(float.Parse(message.getDataAt(1)), float.Parse(message.getDataAt(2)), float.Parse(message.getDataAt(3))), new Quaternion(float.Parse(message.getDataAt(4)), float.Parse(message.getDataAt(5)), 0, 0));
+                            playerList.Add(int.Parse(message.getDataAt(0)), newPlayer);
                         }
                         break;
                     case "UPDATE":
                         //updates the positions of each player that isn't the client
-                        for(int i = 1; i < splitData.Length; i++)
+                        for(int i = 1; i < message.getSize(); i++)
                         {
                             //Debug.Log(splitData[i]);
-                            string[] positionData = splitData[i].Split('/');
                             //0 is player ID
                             //1 is position x
                             //2 is position y
@@ -98,19 +107,19 @@ public class ClientTest : MonoBehaviour {
                             //6 is health
                             //7 is bool isDead
                             //8 is bool isFiring
-                            int playerID = int.Parse(positionData[0]);
+                            int playerID = int.Parse(message.getDataAt(0));
                             if (playerID == myPlayerID) //if this position is the clients, skip the iteration
                             {
-                                health = int.Parse(positionData[6]);
+                                health = int.Parse(message.getDataAt(6));
                                 continue;
                             }
                             GameObject obj = playerList[playerID];
                             Vector3 oldPos = playerList[playerID].transform.position;
                             Vector3 oldRot = playerList[playerID].transform.eulerAngles;
-                            Vector3 pos =  new Vector3(float.Parse(positionData[1]), float.Parse(positionData[2]), float.Parse(positionData[3])); //get x y z position from data sent
+                            Vector3 pos =  new Vector3(float.Parse(message.getDataAt(1)), float.Parse(message.getDataAt(2)), float.Parse(message.getDataAt(3))); //get x y z position from data sent
                             obj.transform.position = Vector3.Lerp(oldPos, pos, 0.1f); //lerp to new position 
-                            obj.transform.rotation = Quaternion.FromToRotation(oldRot, new Vector3(0, float.Parse(positionData[4]), 0)); //rotate body
-                            obj.transform.GetChild(0).transform.rotation = Quaternion.FromToRotation(oldRot, new Vector3(float.Parse(positionData[5]), 0, 0)); //rotate head
+                            obj.transform.rotation = Quaternion.FromToRotation(oldRot, new Vector3(0, float.Parse(message.getDataAt(4)), 0)); //rotate body
+                            obj.transform.GetChild(0).transform.rotation = Quaternion.FromToRotation(oldRot, new Vector3(float.Parse(message.getDataAt(5)), 0, 0)); //rotate head
                         }
                         break;
                     case "INPUTPROCESSED":
@@ -120,16 +129,14 @@ public class ClientTest : MonoBehaviour {
                         for (int i = 0; i < inputList.Count; i++)
                         {
                             string[] inputArray = inputList[i].Split('|');
-                            if (int.Parse(splitData[1]) < int.Parse(inputArray[0])) //these inputs were processed by the server, but are not the most recent
+                            if (int.Parse(message.getDataAt(0)) < int.Parse(inputArray[0])) //these inputs were processed by the server, but are not the most recent
                             {
                                 continue;
                             }
-                            else if (int.Parse(splitData[1]) == int.Parse(inputArray[0])) //most recent input processed, gets new position data 
+                            else if (int.Parse(message.getDataAt(0)) == int.Parse(inputArray[0])) //most recent input processed, gets new position data 
                             {
-                                string[] posArray = splitData[2].Split('/');
-                                string[] rotArray = splitData[3].Split('/');
-                                newPos = new Vector3(float.Parse(posArray[0]), float.Parse(posArray[1]), float.Parse(posArray[2]));
-                                newRot = new Vector3(float.Parse(rotArray[0]), float.Parse(rotArray[1]), 0);
+                                newPos = new Vector3(float.Parse(message.getDataAt(1)), float.Parse(message.getDataAt(2)), float.Parse(message.getDataAt(3)));
+                                newRot = new Vector3(float.Parse(message.getDataAt(4)), float.Parse(message.getDataAt(5)), 0);
                             }
                             else
                             {
@@ -149,7 +156,7 @@ public class ClientTest : MonoBehaviour {
                         transform.rotation = Quaternion.FromToRotation(transform.eulerAngles, new Vector3(0, newRot.y));
                         transform.GetChild(0).transform.rotation = Quaternion.FromToRotation(transform.eulerAngles, new Vector3(newRot.x, 0));
                         //get all inputs that have been processed and removes them
-                        IEnumerable<string> query = inputList.Where(x => int.Parse(x[0].ToString()) <= int.Parse(splitData[1])).OrderBy(n => n);
+                        IEnumerable<string> query = inputList.Where(x => int.Parse(x[0].ToString()) <= int.Parse(message.getDataAt(0))).OrderBy(n => n);
                         foreach (string item in query)
                         {
                             inputList.Remove(item);
@@ -157,8 +164,8 @@ public class ClientTest : MonoBehaviour {
                         break;
                     case "DC":
                         //destroys objects of players that have disconnected from the server
-                        Destroy(playerList[int.Parse(splitData[1])]);
-                        playerList.Remove(int.Parse(splitData[1]));
+                        Destroy(playerList[int.Parse(message.getDataAt(0))]);
+                        playerList.Remove(int.Parse(message.getDataAt(0)));
                         break;
                 }
 

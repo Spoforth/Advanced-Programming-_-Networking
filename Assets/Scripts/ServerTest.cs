@@ -11,6 +11,7 @@ public class ServerTest : MonoBehaviour {
     int connectionId;
     int maxConnections = 10;
     int reliableChannelId;
+    int unreliableChannelId;
     int hostId;
     int socketPort = 8888;
     int playerCount;
@@ -25,6 +26,7 @@ public class ServerTest : MonoBehaviour {
         NetworkTransport.Init();
         ConnectionConfig config = new ConnectionConfig();
         reliableChannelId = config.AddChannel(QosType.Reliable); ;
+        unreliableChannelId = config.AddChannel(QosType.Unreliable);
         HostTopology topology = new HostTopology(config, maxConnections);
         hostId = NetworkTransport.AddHost(topology, socketPort, null); // null means anyone can join, used for servers
         Debug.Log("Socket Open. Host ID is " + hostId);
@@ -47,30 +49,67 @@ public class ServerTest : MonoBehaviour {
         switch (recNetworkEvent)
         {
             case NetworkEventType.ConnectEvent:
+                Debug.Log("Connection event recieved. recHostID: " + recHostId + " recConnedID: " + recConnectionId);
                 playerCount++;
-                Debug.Log("Connection event recieved. recHostID: "  + recHostId + " recConnedID: " + recConnectionId);
-                GameObject clone = Instantiate(playerObject, transform.position, transform.rotation);
-                clients.Add(playerCount, clone); //add new player object to dictionary, recConnectionId serves as playerID
+                int newPlayerID = playerCount;
+                MessageGeneric playeridMessage = new MessageGeneric(1, "PLAYERID");
+                playeridMessage.setDataAt(0, newPlayerID.ToString());
+                SendToPlayer(MessageConverter.messageToString(playeridMessage), reliableChannelId, recConnectionId);
+                int index = Random.Range(0, spawnPoints.Length);
+                GameObject clone = Instantiate(playerObject, spawnPoints[index].position, spawnPoints[index].rotation);
+                clients.Add(playerCount, clone); //add new player object to dictionary
                 ServerClient cloneSC = clone.GetComponent<ServerClient>();
                 cloneSC.ConnectionID = recConnectionId; //tell the ServerClient which person they're responsible for and who to send their data to.
-                SendToPlayer("PLAYERID|" + playerCount, reliableChannelId, recConnectionId);
-                string message = "PLAYERS"; //tell other players a new player has joined
                 foreach (KeyValuePair<int, GameObject> c in clients)
                 {
-                    message += "|" + c.Key.ToString() + "/" + c.Value.transform.position.x.ToString() + "/" + c.Value.transform.position.y.ToString() + "/" + c.Value.transform.position.z.ToString();
+                    MessageGeneric message = new MessageGeneric(6, "PLAYERSETUP");
+                    message.setDataAt(0, c.Key.ToString());
+                    message.setDataAt(1, c.Value.transform.position.x.ToString());
+                    message.setDataAt(2, c.Value.transform.position.y.ToString());
+                    message.setDataAt(3, c.Value.transform.position.z.ToString());
+                    message.setDataAt(4, c.Value.transform.rotation.x.ToString());
+                    message.setDataAt(5, c.Value.transform.rotation.y.ToString());
+                    SendToPlayer(MessageConverter.messageToString(message), reliableChannelId, recConnectionId);
                 }
-                Send(message, reliableChannelId);
+                MessageGeneric newPlayerMsg = new MessageGeneric(6, "NEWPLAYER");
+                newPlayerMsg.setDataAt(0, newPlayerID.ToString());
+                newPlayerMsg.setDataAt(1, clone.transform.position.x.ToString());
+                newPlayerMsg.setDataAt(2, clone.transform.position.y.ToString());
+                newPlayerMsg.setDataAt(3, clone.transform.position.z.ToString());
+                newPlayerMsg.setDataAt(4, clone.transform.rotation.x.ToString());
+                newPlayerMsg.setDataAt(5, clone.transform.rotation.y.ToString());
+                Send(MessageConverter.messageToString(newPlayerMsg), reliableChannelId);
                 break;
             case NetworkEventType.DataEvent:
-                GameObject playerOBJ = clients[recConnectionId];
+                int dataPlayerID = 0;
+                foreach (KeyValuePair<int, GameObject> dataPlayer in clients)
+                {
+                    ServerClient sc = dataPlayer.Value.GetComponent<ServerClient>();
+                    if (sc.ConnectionID == recConnectionId)
+                    {
+                        dataPlayerID = dataPlayer.Key;
+                    }
+                }
+                GameObject playerOBJ = clients[dataPlayerID];
                 ServerClient player = playerOBJ.GetComponent<ServerClient>();
-                player.addToQueue(recBuffer); //input updates handled by ServerClient, add them to queue so that no inputs are lost
+                player.runInput(recBuffer); //input updates handled by ServerClient, add them to queue so that no inputs are lost
                 break;
             case NetworkEventType.DisconnectEvent:
                 //destroy player on disconnect, tell everyone to do the same
-                Destroy(clients[recConnectionId]);
-                clients.Remove(recConnectionId);
-                Send("DC|" + recConnectionId, reliableChannelId);
+                int dcPlayerID = 0;
+                foreach (KeyValuePair<int, GameObject> dcPlayer in clients)
+                {
+                    ServerClient sc = dcPlayer.Value.GetComponent<ServerClient>();
+                    if (sc.ConnectionID == recConnectionId)
+                    {
+                        dcPlayerID = dcPlayer.Key;
+                    }
+                }
+                Destroy(clients[dcPlayerID]);
+                clients.Remove(dcPlayerID);
+                MessageGeneric dcMessage = new MessageGeneric(2, "DC");
+                dcMessage.setDataAt(1, dcPlayerID.ToString());
+                Send(MessageConverter.messageToString(dcMessage), reliableChannelId);
                 break;
         }
     }
@@ -108,17 +147,24 @@ public class ServerTest : MonoBehaviour {
     {
         while (true)
         {
-            string msg = "UPDATE";
             foreach (KeyValuePair<int, GameObject> entry in clients)
             {
+                MessageGeneric message = new MessageGeneric(9, "UPDATE");
                 GameObject obj = entry.Value;
                 ServerClient sc = obj.GetComponent<ServerClient>();
-                sc.runQueue();
+                sc.updatePos();
                 //insert characters to split string so each value is easier to track
-                msg += "|" + entry.Key + "/" + entry.Value.transform.position.x + "/" + entry.Value.transform.position.y + "/" + entry.Value.transform.position.z + "/" + entry.Value.transform.rotation.x + "/" + entry.Value.transform.rotation.y + "/" + sc.health + "/" + sc.isDead.ToString() + "/" + sc.firing.ToString();
+                message.setDataAt(0, entry.Key.ToString());
+                message.setDataAt(1, obj.transform.position.x.ToString());
+                message.setDataAt(2, obj.transform.position.y.ToString());
+                message.setDataAt(3, obj.transform.position.z.ToString());
+                message.setDataAt(4, obj.transform.rotation.x.ToString());
+                message.setDataAt(5, obj.transform.rotation.y.ToString());
+                message.setDataAt(6, sc.health.ToString());
+                message.setDataAt(7, sc.isDead.ToString());
+                message.setDataAt(8, sc.firing.ToString());
+                Send(MessageConverter.messageToString(message), unreliableChannelId);
             }
-            //Debug.Log("Updating Positions. Message is: " + msg);
-            Send(msg, reliableChannelId);
             yield return new WaitForSeconds(time);
         }
     }

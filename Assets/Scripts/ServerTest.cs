@@ -133,7 +133,7 @@ public class ServerTest : MonoBehaviour {
     public void SendToPlayer(string message, int channelID, int cnID) //send message to specific player
     {
         byte error;
-        Debug.Log("Sending to host" + hostId + " : " + message);
+        Debug.Log("Sending to Player" + cnID + " : " + message);
         byte[] msg = Encoding.Unicode.GetBytes(message);
         NetworkTransport.Send(hostId, cnID, channelID, msg, msg.Length * sizeof(char), out error);
     }

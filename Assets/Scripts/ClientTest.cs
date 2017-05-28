@@ -24,7 +24,7 @@ public class ClientTest : MonoBehaviour {
     public int inputCount; //how many inputs have been sent
     public int inputLimit; //how many inputs can be saved
     public Dictionary<int, GameObject> playerList = new Dictionary<int, GameObject>();
-    public List<string> inputList = new List<string>();
+    public Dictionary<int, string> inputList = new Dictionary<int, string>();
     public Canvas UICanvas;
 
 	void Start () 
@@ -84,6 +84,7 @@ public class ClientTest : MonoBehaviour {
                         //spawns a new player when they connect to the server
                         if (int.Parse(message.getDataAt(0)) == myPlayerID)
                         {
+                            Debug.Log("don't spawn me again");
                             break;
                         }
                         else
@@ -118,8 +119,8 @@ public class ClientTest : MonoBehaviour {
                             Vector3 oldRot = playerList[playerID].transform.eulerAngles;
                             Vector3 pos =  new Vector3(float.Parse(message.getDataAt(1)), float.Parse(message.getDataAt(2)), float.Parse(message.getDataAt(3))); //get x y z position from data sent
                             obj.transform.position = Vector3.Lerp(oldPos, pos, 0.1f); //lerp to new position 
-                            obj.transform.rotation = Quaternion.FromToRotation(oldRot, new Vector3(0, float.Parse(message.getDataAt(4)), 0)); //rotate body
-                            obj.transform.GetChild(0).transform.rotation = Quaternion.FromToRotation(oldRot, new Vector3(float.Parse(message.getDataAt(5)), 0, 0)); //rotate head
+                            obj.transform.eulerAngles = new Vector3(0, float.Parse(message.getDataAt(4))); //rotate body
+                            obj.transform.GetChild(0).transform.eulerAngles = new Vector3(float.Parse(message.getDataAt(5)), 0); //rotate head
                         }
                         break;
                     case "INPUTPROCESSED":
@@ -152,12 +153,12 @@ public class ClientTest : MonoBehaviour {
                             }
                         }
                         //applies new position & rotation data
-                        transform.position = Vector3.Lerp(transform.position, newPos, 0); 
-                        transform.rotation = Quaternion.FromToRotation(transform.eulerAngles, new Vector3(0, newRot.y));
-                        transform.GetChild(0).transform.rotation = Quaternion.FromToRotation(transform.eulerAngles, new Vector3(newRot.x, 0));
+                        transform.position = newPos;
+                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, newRot.y);
+                        transform.GetChild(0).transform.eulerAngles = new Vector3(newRot.x, 0, 0);
                         //get all inputs that have been processed and removes them
-                        IEnumerable<string> query = inputList.Where(x => int.Parse(x[0].ToString()) <= int.Parse(message.getDataAt(0))).OrderBy(n => n);
-                        foreach (string item in query)
+                        IEnumerable<int> query = inputList.Keys.Where(x => x <= int.Parse(message.getDataAt(0))).OrderBy(n => n);
+                        foreach (int item in query)
                         {
                             inputList.Remove(item);
                         }
@@ -196,12 +197,11 @@ public class ClientTest : MonoBehaviour {
 
     public void send(string message)
     {
-        message = inputCount + "|" + message;
         byte error;
         byte[] buffer = Encoding.Unicode.GetBytes(message);
         NetworkTransport.Send(hostId, connectionId, reliableChannelId, buffer, message.Length * sizeof(char), out error);
         inputCount++;
-        inputList.Add(message);
+        inputList.Add(inputCount,  message);
         //Debug.Log("Sent Message: " + message);
     }
 }

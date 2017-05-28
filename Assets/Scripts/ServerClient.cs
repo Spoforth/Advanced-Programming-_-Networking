@@ -93,7 +93,7 @@ public class ServerClient : player{
                 Shoot();
                 break;
             case "TURN":
-                Turn(float.Parse(inputMessage.getDataAt(0)), float.Parse(inputMessage.getDataAt(1)));
+                Turn(float.Parse(inputMessage.getDataAt(1)), float.Parse(inputMessage.getDataAt(0)));
                 break;
         }
         inputCount++;
